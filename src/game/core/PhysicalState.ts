@@ -1,4 +1,4 @@
-import Vector3d from "./Vector3d";
+import Vector3d from "../math/Vector3d";
 
 export default class PhysicalState {
     constructor(

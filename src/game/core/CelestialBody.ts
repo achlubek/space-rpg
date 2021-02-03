@@ -1,10 +1,6 @@
-export enum Type {
-    Barycenter,
-    Star,
-    Planet,
-    Moon,
-    Asteroid
-}
+import PhysicalState from "./PhysicalState";
+import Vector3d from "../math/Vector3d";
+
 export default class CelestialBody {
     constructor(
         public name: string,
@@ -16,9 +12,20 @@ export default class CelestialBody {
     }
 }
 
-interface ICelestialBody {
-    getName(): string;
-    getType(): Type;
-    getMass(): number;
-    getRadius(): number;
-}
+
+
+/**
+ * AbstractCelestialBody:
+ *  name
+ *  mass
+ *  radius
+ *  get gravity calculations
+ *
+ * Star will extend and have additional:
+ *  color
+ *
+ * CelestialBody will also extend and have additional:
+ *  parentBody
+ *  orbitalRadius
+ *
+ */
